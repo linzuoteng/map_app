@@ -1,0 +1,7 @@
+{% extends 'map_app/base.html' %} {% block content %}
+<h2>Addressの追加</h2>
+<form method="post">
+  {% csrf_token %} {{ form.as_p }}
+  <input type="submit" value="追加" />
+</form>
+{% endblock content %}

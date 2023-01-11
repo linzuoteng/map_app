@@ -1,0 +1,56 @@
+{% extends 'map_app/base.html' %} {% block content %}{% load static %}
+
+<header>
+  {% if request.user.is_authenticated %}
+  <div class="title">
+    <p>ようこそ{{request.user}}さん</p>
+    <h3>ゴミ箱共有×ゴミモン</h3>
+  </div>
+  <div class="Logout">
+    <a href="{% url 'monsterinfo_list' %}">ゴミモン図鑑</a>
+    <a href="http://127.0.0.1:8000/random_monster/">ゴミモンガチャ</a>
+    <a href="{% url 'logout' %}">ログアウト</a>
+  </div>
+  {% else %}
+  <div class="title">
+    <h3>ゴミ箱共有×ゴミモン</h3>
+  </div>
+  <a href="{% url 'login' %}">ログイン</a>
+  {% endif %}
+</header>
+<h1 class="todoufuken">都道府県:埼玉県</h1>
+<h1 class="shityoson">市区町村:越谷市</h1>
+
+<script type="text/javascript">
+  var b = "";
+  b = document.getElementsByClassName("todoufuken");
+  var c = "";
+  c = document.getElementsByClassName("shityoson");
+</script>
+
+<div class="map_title">ゴミ箱検索</div>
+<div class="map_main">
+  <div id="map"></div>
+</div>
+
+<script type="text/javascript" src="{% static 'js/code1_1.js' %}"></script>
+
+<script
+  async
+  defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc9ePzZUfT-Tsy51CbQXDB8rVmEhMtAhI&callback=initMap"
+></script>
+
+<a class="link" type="button" href="{% url 'create_address' %}">ゴミ箱の追加</a>
+
+<table>
+  {% for add in address %}
+  <tr>
+    <td>{{add.address1}}</td>
+    <td><a href="{% url 'address_detail' add.id %}">確認</a></td>
+    <td><a href="{% url 'delete_address' add.id %}">消去</a></td>
+  </tr>
+  {% endfor %}
+</table>
+
+{% endblock content %}

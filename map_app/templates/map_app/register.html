@@ -1,0 +1,61 @@
+{% extends 'map_app/base.html' %} {% block content %}
+
+<div class="register_main">
+  <div class="register_container">
+    <div class="title">ゴミ箱共有×ゴミモン</div>
+    <h1>新規登録</h1>
+
+    <form action="" method="POST">
+      {% csrf_token %}
+      <p class="form">
+        <label>ユーザー名<br /></label>
+        {{form.username}}
+      </p>
+      <p class="form">
+        <label>メールアドレス<br /></label>
+        {{form.email}}
+      </p>
+      <p class="form">
+        <label>性<br /></label>
+        {{form.last_name}}
+      </p>
+      <p class="form">
+        <label>名<br /></label>
+        {{form.first_name}}
+      </p>
+      <p class="form">
+        <label>性(ふりがな)<br /></label>
+        {{form.lastname2}}
+      </p>
+      <p class="form">
+        <label>名(ふりがな)<br /></label>
+        {{form.firstname2}}
+      </p>
+      <p class="form">
+        <label>性別<br /></label>
+        {{form.sex}}
+      </p>
+      <p class="form">
+        <label>年齢<br /></label>
+        {{form.age}}
+      </p>
+      <p class="form">
+        <label>パスワード<br /></label>
+        {{form.password1}}
+      </p>
+      <p class="form">
+        <label>確認用パスワード<br /></label>
+        {{form.password2}}
+      </p>
+      <div class="btn_wraper">
+        <input class="btn" type="submit" value="新規登録" />
+      </div>
+    </form>
+    <p class="confirm">既にアカウントを持っていますか？</p>
+
+    <div class="login_confirm">
+      <a href="{% url 'login' %}">ログイン</a>
+    </div>
+  </div>
+</div>
+{% endblock content %}

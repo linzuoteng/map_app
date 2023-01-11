@@ -1,0 +1,21 @@
+{% extends 'map_app/base.html' %}{% block content %}
+<header>
+  <div class="title">
+    <p>{{request.user}}さんの</p>
+    <h3>ゴミモンガチャ</h3>
+  </div>
+  <a href="{% url 'address' %}">ゴミ箱検索に戻る</a>
+</header>
+
+<div class="random_all">
+  <div class="random_main">
+    <p>ゴミモンチケットを一枚消費してガチャを引きます。</p>
+    <p>ゴミモンチケット所有数:{{ request.user.point }}</p>
+    <form method="post">
+      {% csrf_token%}
+      <button type="submit" class="btn">ガチャを引く</button>
+    </form>
+  </div>
+</div>
+
+{% endblock content %}

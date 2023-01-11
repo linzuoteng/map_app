@@ -1,0 +1,17 @@
+{% extends 'map_app/base.html' %}{% block content %}
+<header>
+  <div class="title">
+    <h3>ゴミモンガチャ結果</h3>
+  </div>
+</header>
+<div class="result_all">
+  <div class="result">
+    <img src="{{monster_list.images.url}}" />
+    <p>{{ monster_list.name }}が当たりました</p>
+    <button class="back" id="back" onclick="history.back()">
+      ガチャ画面に戻る
+    </button>
+  </div>
+</div>
+
+{% endblock content %}

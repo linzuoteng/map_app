@@ -1,0 +1,25 @@
+{% extends 'map_app/base.html' %} {% block content %}
+
+<h1 class="zip_code">郵便番号:{{address_detail.zip_code}}</h1>
+<h1 class="todoufuken">都道府県:{{address_detail.address1}}</h1>
+<h1 class="shityoson">市区町村:{{address_detail.address2}}</h1>
+
+{% load static %}
+
+<script type="text/javascript">
+  var b = "";
+  b = document.getElementsByClassName("todoufuken");
+  var c = "";
+  c = document.getElementsByClassName("shityoson");
+</script>
+
+<div id="map" style="width: 600px; height: 200px"></div>
+
+<script type="text/javascript" src="{% static 'js/code1_1.js' %}"></script>
+
+<script
+  async
+  defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAc9ePzZUfT-Tsy51CbQXDB8rVmEhMtAhI&callback=initMap"
+></script>
+{% endblock content %}

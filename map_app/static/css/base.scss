@@ -1,0 +1,319 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Kiwi Maru", serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 70px;
+  background-color: rgb(231, 231, 231);
+
+  & a {
+    text-decoration: none;
+    padding: 10px;
+  }
+}
+
+.login_main {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(231, 231, 231);
+
+  & .login_container {
+    position: absolute;
+    border: 1px solid black;
+    min-width: 700px;
+    min-height: 440px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: white;
+
+    & .title {
+      margin-top: 35px;
+    }
+
+    & h1 {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    & form {
+      & p {
+        margin: 50px;
+        font-size: 20px;
+
+        & input {
+          height: 30px;
+          width: 300px;
+          border-radius: 50px;
+          font-size: 16px;
+          padding-left: 10px;
+        }
+      }
+
+      & .btn {
+        border-radius: 50px;
+        border: none;
+        padding: 10px 20px;
+        background-color: rgb(231, 231, 231);
+        transition: all 0.5s;
+
+        &:hover {
+          color: white;
+          background-color: black;
+          cursor: pointer;
+        }
+      }
+    }
+
+    & p {
+      text-align: center;
+      font-size: 15px;
+      margin-top: 30px;
+    }
+
+    & a {
+      font-size: 15px;
+      text-decoration: none;
+      color: rgb(45, 93, 252);
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.register_main {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(231, 231, 231);
+
+  & .register_container {
+    position: absolute;
+    border: 1px solid black;
+    min-width: 440px;
+    min-height: 440px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+
+    & .title {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    & h1 {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    & .form {
+      margin: 3px;
+      margin-left: 70px;
+
+      & input {
+        width: 300px;
+      }
+    }
+
+    & .btn_wraper {
+      text-align: center;
+
+      & .btn {
+        border-radius: 50px;
+        border: none;
+        padding: 10px 20px;
+        background-color: rgb(231, 231, 231);
+        transition: all 0.5s;
+        margin-top: 15px;
+
+        &:hover {
+          color: white;
+          background-color: black;
+          cursor: pointer;
+        }
+      }
+    }
+
+    & .confirm {
+      font-size: 15px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    & .login_confirm {
+      text-align: center;
+      margin-bottom: 20px;
+      & a {
+        font-size: 15px;
+        text-decoration: none;
+        color: rgb(45, 93, 252);
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+.monsterlist_main {
+  text-align: center;
+  background-color: azure;
+
+  & .num {
+    margin-top: 30px;
+  }
+
+  & .monster_conteiner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+
+    & .monsters {
+      width: 80%;
+      height: 500px;
+      margin-top: 15px;
+      box-shadow: 13px 10px 7px -1px #777777;
+      border-radius: 20px;
+      background-color: white;
+      & .list_head {
+        width: 50%;
+        height: 50px;
+        margin: 0 auto;
+
+        & p {
+          font-size: 20px;
+          margin-top: 15px;
+        }
+      }
+
+      & img {
+        width: 100%;
+        height: 350px;
+        margin-top: 50px;
+      }
+    }
+  }
+}
+
+.random_all {
+  background-image: url("/static/imgs/kabegami.jpeg");
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  padding-bottom: 70px;
+  & .random_main {
+    position: absolute;
+    min-width: 400px;
+    min-height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    & p {
+      color: rgb(7, 7, 7);
+      font-size: 30px;
+      font-weight: 300;
+      background-color: white;
+    }
+
+    & .btn {
+      border-radius: 50px;
+      border: none;
+      padding: 10px 20px;
+      background-color: rgb(231, 231, 231);
+      transition: all 0.5s;
+      margin-top: 30px;
+
+      &:hover {
+        color: white;
+        background-color: black;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.result_all {
+  background-image: url("/static/imgs/kabegami.jpeg");
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  padding-bottom: 70px;
+
+  & .result {
+    position: absolute;
+    min-width: 400px;
+    min-height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgb(231, 231, 231);
+    border: solid 1px rgb(231, 231, 231);
+
+    & img {
+      width: 500px;
+      height: 400px;
+    }
+
+    & p {
+      margin-top: 10px;
+    }
+
+    & .back {
+      border-radius: 50px;
+      border: none;
+      padding: 10px 20px;
+      background-color: white;
+      margin: 15px 0;
+
+      &:hover {
+        color: white;
+        background-color: black;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.map_title {
+  margin-left: 10%;
+  font-size: 30px;
+}
+
+.map_main {
+  width: 100vw;
+  height: 700px;
+  position: relative;
+  & #map {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.link {
+  text-decoration: none;
+  margin-left: 10%;
+  font-size: 20px;
+}
+
+.shityoson {
+  display: none;
+}
+
+.todoufuken {
+  display: none;
+}

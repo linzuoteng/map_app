@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Kiwi Maru", serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 70px;
+  background-color: rgb(231, 231, 231);
+}
+header a {
+  text-decoration: none;
+  padding: 10px;
+}
+
+.login_main {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(231, 231, 231);
+}
+.login_main .login_container {
+  position: absolute;
+  border: 1px solid black;
+  min-width: 700px;
+  min-height: 440px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: white;
+}
+.login_main .login_container .title {
+  margin-top: 35px;
+}
+.login_main .login_container h1 {
+  font-size: 20px;
+  text-align: center;
+}
+.login_main .login_container form p {
+  margin: 50px;
+  font-size: 20px;
+}
+.login_main .login_container form p input {
+  height: 30px;
+  width: 300px;
+  border-radius: 50px;
+  font-size: 16px;
+  padding-left: 10px;
+}
+.login_main .login_container form .btn {
+  border-radius: 50px;
+  border: none;
+  padding: 10px 20px;
+  background-color: rgb(231, 231, 231);
+  transition: all 0.5s;
+}
+.login_main .login_container form .btn:hover {
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+.login_main .login_container p {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 30px;
+}
+.login_main .login_container a {
+  font-size: 15px;
+  text-decoration: none;
+  color: rgb(45, 93, 252);
+  margin-bottom: 30px;
+}
+
+.register_main {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(231, 231, 231);
+}
+.register_main .register_container {
+  position: absolute;
+  border: 1px solid black;
+  min-width: 440px;
+  min-height: 440px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+}
+.register_main .register_container .title {
+  margin-top: 20px;
+  text-align: center;
+}
+.register_main .register_container h1 {
+  font-size: 20px;
+  text-align: center;
+}
+.register_main .register_container .form {
+  margin: 3px;
+  margin-left: 70px;
+}
+.register_main .register_container .form input {
+  width: 300px;
+}
+.register_main .register_container .btn_wraper {
+  text-align: center;
+}
+.register_main .register_container .btn_wraper .btn {
+  border-radius: 50px;
+  border: none;
+  padding: 10px 20px;
+  background-color: rgb(231, 231, 231);
+  transition: all 0.5s;
+  margin-top: 15px;
+}
+.register_main .register_container .btn_wraper .btn:hover {
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+.register_main .register_container .confirm {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 20px;
+}
+.register_main .register_container .login_confirm {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.register_main .register_container .login_confirm a {
+  font-size: 15px;
+  text-decoration: none;
+  color: rgb(45, 93, 252);
+  margin-bottom: 40px;
+}
+
+.monsterlist_main {
+  text-align: center;
+  background-color: azure;
+}
+.monsterlist_main .num {
+  margin-top: 30px;
+}
+.monsterlist_main .monster_conteiner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+}
+.monsterlist_main .monster_conteiner .monsters {
+  width: 80%;
+  height: 500px;
+  margin-top: 15px;
+  box-shadow: 13px 10px 7px -1px #777777;
+  border-radius: 20px;
+  background-color: white;
+}
+.monsterlist_main .monster_conteiner .monsters .list_head {
+  width: 50%;
+  height: 50px;
+  margin: 0 auto;
+}
+.monsterlist_main .monster_conteiner .monsters .list_head p {
+  font-size: 20px;
+  margin-top: 15px;
+}
+.monsterlist_main .monster_conteiner .monsters img {
+  width: 100%;
+  height: 350px;
+  margin-top: 50px;
+}
+
+.random_all {
+  background-image: url("/static/imgs/kabegami.jpeg");
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  padding-bottom: 70px;
+}
+.random_all .random_main {
+  position: absolute;
+  min-width: 400px;
+  min-height: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.random_all .random_main p {
+  color: rgb(7, 7, 7);
+  font-size: 30px;
+  font-weight: 300;
+  background-color: white;
+}
+.random_all .random_main .btn {
+  border-radius: 50px;
+  border: none;
+  padding: 10px 20px;
+  background-color: rgb(231, 231, 231);
+  transition: all 0.5s;
+  margin-top: 30px;
+}
+.random_all .random_main .btn:hover {
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.result_all {
+  background-image: url("/static/imgs/kabegami.jpeg");
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  padding-bottom: 70px;
+}
+.result_all .result {
+  position: absolute;
+  min-width: 400px;
+  min-height: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgb(231, 231, 231);
+  border: solid 1px rgb(231, 231, 231);
+}
+.result_all .result img {
+  width: 500px;
+  height: 400px;
+}
+.result_all .result p {
+  margin-top: 10px;
+}
+.result_all .result .back {
+  border-radius: 50px;
+  border: none;
+  padding: 10px 20px;
+  background-color: white;
+  margin: 15px 0;
+}
+.result_all .result .back:hover {
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.map_title {
+  margin-left: 10%;
+  font-size: 30px;
+}
+
+.map_main {
+  width: 100vw;
+  height: 700px;
+  position: relative;
+}
+.map_main #map {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.link {
+  text-decoration: none;
+  margin-left: 10%;
+  font-size: 20px;
+}
+
+.shityoson {
+  display: none;
+}
+
+.todoufuken {
+  display: none;
+}/*# sourceMappingURL=base.css.map */

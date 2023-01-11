@@ -1,0 +1,30 @@
+{% extends 'map_app/base.html' %}{% block content %}
+<header>
+  <div class="title">
+    <p>{{request.user}}さんの</p>
+    <h3>ゴミモン図鑑</h3>
+  </div>
+  <a href="{% url 'address' %}">ゴミ箱検索に戻る</a>
+</header>
+<div class="monsterlist_main">
+  <div class="monsterlist">
+    <h1>持っているゴミモン</h1>
+    <div class="monster_conteiner">
+      {% for monster in monsters %}
+      <div class="monsters">
+        <div class="list_head">
+          <p>No.{{monster.monster.id}}</p>
+          <p>{{monster.monster.name}}</p>
+        </div>
+        <div class="list_main">
+          <img src="{{monster.monster.images.url}}" />
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
+    <p class="num">所持数:{{ monsters|length }}</p>
+  </div>
+</div>
+
+{% endblock content %}

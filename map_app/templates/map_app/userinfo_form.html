@@ -1,0 +1,6 @@
+<h2>ユーザーの新規登録</h2>
+<a href="{% url 'users' %}">戻る</a>
+<form method="post">
+  {% csrf_token %} {{ form.as_p }}
+  <input type="submit" value="追加" />
+</form>

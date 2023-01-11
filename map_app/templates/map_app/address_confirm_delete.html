@@ -1,0 +1,8 @@
+{% extends 'map_app/base.html' %} {% block content %}
+<a href="{% url 'address' %}">戻る</a>
+<form method="POST">
+  {% csrf_token %}
+  <p>{{ address_delete.address1 }}を本当に消去しますか？</p>
+  <input type="submit" value="削除" />
+</form>
+{% endblock content %}
